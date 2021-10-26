@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><style>*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.container{
+    margin: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+label{
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    color: white;
+    background: #0076ff;
+    z-index: 2;/*put it above the accordion content*/
+}
+
+.accordion:last-child > label, .accordion-content{
+    border: none;
+}
+
+.accordion-content{
+    border-bottom: 1px solid black;
+    padding: 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    z-index: -1;
+    transition: 0.3s linear;
+}
+
+input:checked ~ .accordion-content{
+    padding: 15px;
+    opacity: 1;
+    max-height: 500px;
+    z-index: 1;
+}
+
+.cor{
+    height: 200px;
+    line-height: 200px;
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: red;
+}
+
+.textarea{
+    width: 300px;
+    height: 300px;
+}
+
+.input, .textarea{
+    outline: none;
+    border: none;
+    padding: 10px;
+    background: #0076ff;
+    color: lightgreen;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+}
+
+.input::placeholder, .textarea::placeholder { 
+    color: white;
+   }
+
+.input:focus::placeholder, .textarea:focus::placeholder{
+    color: lightgreen;
+}
+
+.input:focus, .textarea:focus{
+    background: #173459;
+    border-bottom: 5px solid #903c56;
+}</style></head><body><div class="container"><div class="accordion"><input type="radio" name="accordion" id="accordion1" checked="checked"> <label for="accordion1">Accordion #1</label><div class="accordion-content">Accordion no. 1 content goes here. Lorem ipsum dolor sit amet.</div></div><div class="accordion"><input type="radio" name="accordion" id="accordion2"> <label for="accordion2">Accordion #2</label><div class="accordion-content">Accordion no. 2 content goes here. Lorem ipsum dolor sit amet.</div></div><div class="accordion"><input type="radio" name="accordion" id="accordion3"> <label for="accordion3">Accordion #3</label><div class="accordion-content">Accordion no. 3 content goes here. Lorem ipsum dolor sit amet.</div></div><div class="accordion"><input type="radio" name="accordion" id="accordion4"> <label for="accordion4">Accordion #4</label><div class="accordion-content">Accordion no. 4 content goes here. Lorem ipsum dolor sit amet.</div></div><p><span style="font-size: 30px;">I </span><span style="color: blue;">am a paragraph</span><span style="color: red;"> and my words are styled</span><span style="color: green;"> diferently using</span><span style="color: gold;"> the span element.</span></p><div class="cor" onclick="changeColor(this)">Tap me to change my color!</div></div><div><p><textarea class="textarea" placeholder="Yext goes here..."></textarea></p><p><input type="text" class="input" placeholder="Text goes here"></p></div><br><br><div><a style="padding-bottom: 33px;" href="index.html">VOLTAR</a></div></body><script src="js/all.js"></script></html>

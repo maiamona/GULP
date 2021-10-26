@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"><!-- <link rel="stylesheet" href="css/style.css"> --><style>*{
+    box-sizing: border-box;
+}
+
+input[type="checkbox"], input[type="radio"]{
+    display: none;
+}
+
+label{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #0076ff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+}
+
+label > span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #0076ff;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+    background: #173459;
+    color: white;
+}
+
+input[type="checkbox"]:checked + label > span, input[type="radio"]:checked + label > span{
+    background: #0076ff;
+}
+
+.pagination-container{
+	text-align: center;
+}
+
+.pagination{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #0076ff;
+}
+
+/* a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+} */
+
+.pagination a{
+	color: black;
+	text-decoration: none;
+	padding: 7px 14px;
+	float: left;
+	border-right: 1px solid #0076ff;
+	transition-duration: 1s;
+}
+
+.pagination a:hover{
+	background: #0076ff;
+	color: white;
+}
+
+.pagination li:last-child > a{/*select the last child*/
+border: none;/*removes borders of the last link*/
+}
+
+ul {
+    list-style-type: none;
+}</style></head><body><form action=""><input type="checkbox" name="fruits" value="Apple" id="apple"> <label for="apple"><span></span>Apple</label> <input type="checkbox" name="fruits" value="Orange" id="orange"> <label for="orange"><span></span>Orange</label> <input type="checkbox" name="fruits" value="Mango" id="mango"> <label for="mango"><span></span>Mango</label> <input type="checkbox" name="fruits" value="Banana" id="banana"> <label for="banana"><span></span>mango</label></form><h2>Styling Radio</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, aut!</p><form action=""><input type="radio" name="person" value="Mang Juan" id="mang-juan"> <label for="mang-juan"><span></span>Mang Juan</label> <input type="radio" name="person" value="Mang Pedro" id="mang-pedro"> <label for="mang-pedro"><span></span>Mang Pedro</label> <input type="radio" name="person" value="Mang Lito" id="mang-lito"> <label for="mang-lito"><span></span>Mang Lito</label> <input type="radio" name="person" value="Mang Arturo" id="mang-arturo"> <label for="mang-arturo"><span></span>Mang Arturo</label></form><br><div class="pagination-container"><ul class="pagination" style="display: flex;width: 17.10%;border-radius: 5px;"><li><a href="#"><i class="far fa-angle-left"></i></a></li><li><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#"><i class="fal fa-angle-right"></i></a></li></ul></div><br><div><a style="padding-bottom: 33px;" href="index.html">VOLTAR</a></div><script src="js/all.js"></script></body></html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><style>body{
+    background: rgba(6, 172, 248, 0.986);
+    font: normal 15pt Arial;
+    }
+    
+    header{
+        color: white;
+        text-align: center;
+    }
+    
+    section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 520px;
+    margin: auto; /*margin ao meio*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.658);
+    }
+    input[type=button],  input[type=image]{
+        width: 100%;
+        
+    }
+    H1{
+      text-align: center;
+    }
+    #tela[type="text"]{ padding: 20px 10px; line-height: 28px; text-align: right;}
+    #tab1 tr td {
+        border: none;
+      }
+    #calculadora {
+  border: 1px solid black;
+  background: rgba(6, 172, 248, 0.986);
+  margin: auto;
+}
+#calculadora tr {
+  background: white;
+  
+}
+#calculadora tr td {
+  background: rgba(6, 172, 248, 0.986);
+  
+}
+    
+    img {
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+      }
+    
+      div{
+          
+          padding: 8px;
+      }
+    
+   
+
+    footer{
+        color: white;
+        text-align: center;
+        font-style: italic;
+    }</style></head><body><header><div><h1>CALCULADORA</h1><a style="float: right;color: white;" href="index.html">VOLTAR</a></div></header><section><div><h1>CALCULADORA DIGITAL</h1><table id="calculadora"><tr></tr><tr><td colspan="4"><input id="tela" name="tela" type="text" name="valor" id="valor"></td></tr><td><input type="button" value="xE-4" name="xE_4" onclick="exp(-4)"></td><td><input type="button" value="xE-3" name="xE_3" onclick="exp(-3)"></td><td><input type="button" value="xE-2" name="xE_2" onclick="exp(-2)"></td><td><input id="image" type="image" alt="Login" src="img/apagar.png" onclick="Ce()"></td><tr><td><input type="button" value="xE5" name="xE5" onclick="exp(5)"></td><td><input type="button" value="xE4" name="xE4" onclick="exp(4)"></td><td><input type="button" value="xE3" name="xE3" onclick="exp(3)"></td><td><input type="button" onclick="Ce()" value="C"></td></tr><tr><td><input type="button" value="xE2" name="xE2" onclick="exp(2)"></td><td><input type="button" value="%" name="%" onclick="Numero('%')"></td><td><input type="button" value="&radic;x" name="2/x" onclick="raiz2()"></td><td><input type="button" value="&divide;" name="/" onclick="Numero('/')"></td></tr><tr><td><input type="button" value="7" name="7" onclick="Numero(7)"></td><td><input type="button" value="8" name="8" onclick="Numero(8)"></td><td><input type="button" value="9" name="9" onclick="Numero(9)"></td><td><input type="button" value="&lowast;" name="X" onclick="Numero('*')"></td></tr><tr><td><input type="button" value="4" name="4" onclick="Numero(4)"></td><td><input type="button" value="5" name="5" onclick="Numero(5)"></td><td><input type="button" value="6" name="6" onclick="Numero(6)"></td><td><input type="button" value="-" name="-" onclick="Numero('-')"></td></tr><tr><td><input type="button" value="1" name="1" onclick="Numero(1)"></td><td><input type="button" value="2" name="2" onclick="Numero(2)"></td><td><input type="button" value="3" name="3" onclick="Numero(3)"></td><td><input type="button" value="+" name="+" onclick="Numero('+')"></td></tr><tr><td><input type="button" value="+/-" name="+/-" onclick="Numero('-')"></td><td><input type="button" value="0" name="0" onclick="Numero(0)"></td><td><input type="button" value="," name="," onclick="Numero('.')"></td><td><input type="button" value="=" name="=" onclick="igual()"></td></tr></table><div id="res" name="tabuada" size="10"></div></div></section><footer><p>&copy; Cursoemvideo</p></footer></body><script>let tela=document.getElementById('tela');
+tela.focus();  
+
+
+function Ce()
+{
+    tela.value='';    
+    tela.focus();      
+}
+function Numero(num){
+    tela.value+=num ; 
+}
+
+
+function igual(){
+    var resultado=0;
+    resultado=tela.value
+    tela.value=''
+    tela.value=eval(resultado) 
+}
+
+function exp(num){ 
+    var resultado=0;
+    resultado=tela.value
+    tela.value=''
+    tela.value= Math.pow(resultado,num); 
+}
+
+function raiz2(){
+    var resultado=0;
+    resultado=tela.value
+    tela.value=''
+    tela.value=Math.sqrt(resultado)
+}</script></html>
