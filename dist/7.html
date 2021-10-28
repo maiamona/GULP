@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><style>body{
+background: rgba(6, 172, 248, 0.986);
+font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+background: white;
+border-radius: 10px;
+padding: 15px;
+width: 500px;
+margin: auto; /*margin ao meio*/
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.658);
+}
+
+#imagen {
+    border-radius: 50%;
+    
+  }
+
+  div{
+      text-align: center;
+      padding: 8px;
+  }
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}</style></head><body onload="carregar()"><header><div><h1>Hora do dia</h1><a style="float: right;color: white;" href="index.html">VOLTAR</a></div></header><section><div id="msg">aqui vai aparecer a mensagem</div><div id="foto"><img id="imagen" src="img/manha.jpg" alt="foto do dia" width="250px" height="250px"></div></section><footer><p>&copy; Cursoemvideo</p></footer><script>function carregar(){
+var msg=window.document.getElementById('msg');
+var img=window.document.getElementById('imagen');
+var data=new Date();
+var hora = data.getHours();
+var min =data.getMinutes();
+
+msg.innerHTML=`agora são <strong>${hora} : ${min}</strong> `
+if(hora >=5 && hora <12){
+    msg.innerHTML+=` bom dia para ti`
+    img.src = `img/manha.jpg`
+    document.body.style.backgroundColor = "#e8da8c";
+} else if(hora >=12 && hora <19){
+    msg.innerHTML+=` boa tarde para ti`
+    img.src = `img/tarde.jpg`
+    document.body.style.backgroundColor = '#f5821f';
+} else if( hora >=19 &&  hora < 23){
+    msg.innerHTML+=` boa noite para ti`
+    img.src = `img/noite.jpg`
+    document.body.style.backgroundColor = '#3e3535';
+} else if(hora >=0 && hora <5){
+    msg.innerHTML+=` boa noite para ti ja passa da meia noite`
+    img.src = `img/madrugada.jpg` 
+    document.body.style.backgroundColor = '#3e3535';
+}
+
+}</script></body></html>
