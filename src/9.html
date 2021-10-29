@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body{
+background: rgba(6, 172, 248, 0.986);
+font: normal 15pt Arial;
+}
+
+    input{
+    width: 95%;
+}
+
+h1{
+    font-size: 25px;
+    margin-left: 603px;
+    margin-top: 142px;
+    color: white;
+}
+
+table{
+    margin: 0 auto;
+    background: white;   
+}
+    </style>
+</head>
+<body>
+    <a style="float: right;color: white;" href="index.html">VOLTAR</a>
+    <div>
+    <h1>CALCULADORA DIGITAL</h1>
+    <table>
+        <tr><td colspan="4" ><input id="visor" type="text"></td></tr>
+<tr><td><input type="button" value="%" onclick="preencher('%');"></td><td><input  type="button" value="xE4" onclick="espoente4(4);" id="esp4"></td><td><input  type="button" value="xE2" onclick="espoente2(2);" id="esp2"></td><td><input  type="button" value="xE3" onclick="espoente3(3);" id="esp3"></td></tr>
+<tr><td><button  onclick="espoente5(5);" id="esp5">xE5</button></td><td><input  type="button" value="C" onclick="limpar()"></td><td><input  type="button" value="X" onclick="limpar()"></td><td><input  type="button" value="/"></td></tr>
+<tr><td><input type="button" value="7" onclick="preencher(7);"></td><td><input  type="button" value="8" onclick="preencher(8);"></td><td><input  type="button" value="9" onclick="preencher(9);"></td><td><input  type="button" value="*" onclick="preencher('*');"></td></tr>
+<tr><td><input type="button" value="4" onclick="preencher(4);"></td><td><input  type="button" value="5" onclick="preencher(5);"></td><td><input  type="button" value="6" onclick="preencher(6);"></td><td><input  type="button" value="-" onclick="preencher('-');"></td></tr>
+<tr><td><input type="button" value="1" onclick="preencher(1);"></td><td><input  type="button" value="2" onclick="preencher(2);"></td><td><input  type="button" value="3" onclick="preencher(3);"></td><td><input  type="button" value="+" onclick="preencher('+');"></td></tr>
+<tr><td><input type="button" value="+/-" onclick="preencher('-');"></td><td><input  type="button" value="0" onclick="preencher(0)"></td><td><input  type="button" value="," onclick="preencher('.');"></td><td><input  type="button" value="=" onclick="calcular()"></td></tr>    
+</table>
+</div>
+</body>
+<script>
+document.getElementById('visor').disabled=true;
+let esp2=document.getElementById('esp2')
+let esp3=document.getElementById('esp3')
+let esp4=document.getElementById('esp4')
+let esp5=document.getElementById('esp6')
+function limpar(){
+    document.getElementById('visor').value=''
+}
+
+function preencher(valor){
+    document.getElementById('visor').value+=valor
+   
+}
+
+function calcular(){
+    var resultado=0;
+    resultado=document.getElementById('visor').value
+    document.getElementById('visor').value=''
+    document.getElementById('visor').value=eval(resultado)
+}
+</script>
+</html>
