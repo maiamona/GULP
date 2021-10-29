@@ -194,6 +194,22 @@ gulp.task("9", function () {
 	.pipe(browserSync.stream(''))
 });
 
+gulp.task("10", function () {
+	return gulp.src('./src/10.html')
+	.pipe(html({collapseWhitespace:true}))
+	.on("error", notify.onError("Error: <%= error.message %>"))
+	.pipe(gulp.dest('./dist/'))
+	.pipe(browserSync.stream(''))
+});
+
+gulp.task("11", function () {
+	return gulp.src('./src/11.html')
+	.pipe(html({collapseWhitespace:true}))
+	.on("error", notify.onError("Error: <%= error.message %>"))
+	.pipe(gulp.dest('./dist/'))
+	.pipe(browserSync.stream(''))
+});
+
 gulp.task("less", function () {
 	return gulp.src('./src/less.html')
 	.pipe(html({collapseWhitespace:true}))
@@ -239,7 +255,7 @@ gulp.task('clean', ['imagemin'], function () {
 //apagar e repor imagens
 
 // browser Sync
-gulp.task('BS',['html','sass', 'checkout', 'produto', 'sobre', 'outro', 'outro2', '1', '2', '3', '4', '5', '6', 'less', '7', '8', '9'], function () {
+gulp.task('BS',['html','sass', 'checkout', 'produto', 'sobre', 'outro', 'outro2', '1', '2', '3', '4', '5', '6', 'less', '7', '8', '9', '10', '11'], function () {
 	browserSync.init({
 	server:{
 		baseDir: './dist/'
@@ -261,6 +277,8 @@ gulp.task('BS',['html','sass', 'checkout', 'produto', 'sobre', 'outro', 'outro2'
 	gulp.watch('./src/7.html', ['7']);
 	gulp.watch('./src/8.html', ['8']);
 	gulp.watch('./src/9.html', ['9']);
+	gulp.watch('./src/10.html', ['10']);
+	gulp.watch('./src/11.html', ['11']);
 	gulp.watch('./src/less.html', ['less']);
 		gulp.watch('./src/scss/**/*.scss', ['sass']);
 	});

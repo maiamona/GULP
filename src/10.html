@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a style="float: right;" href="index.html">VOLTAR</a>
+    <table>
+        <thead>
+            <th role="columnheader">Day 1</th>
+            <th role="columnheader">Day 2</th>
+            <th role="columnheader">Day 3</th>
+        </thead>
+        <tbody>
+        <td role="cell">95</td>
+        <td role="cell">14</td>
+        <td role="cell">25</td>
+        </tbody>
+       </table>
+       <div role="dialog">
+        <p>Are you sure?</p>
+        <button role="button">Yes</button>
+        <button role="button">No</button>
+       </div>
+       <form action="">
+        <fieldset>
+        <legend>Login form</legend>
+        <div>
+        <label for="username">Your username</label>
+        <input type="text" id="username" aria-describedby="username-tip" required />
+        <div role="tooltip" id="username-tip">Your username is your email address</div>
+        </div>
+        <div>
+        <label for="password">Your password</label>
+        <input type="text" id="password" aria-describedby="password-tip" required />
+        <div role="tooltip" id="password-tip">Was emailed to you when you signed up</div>
+        </div>
+        </fieldset>
+       </form>       
+   </body>
+</html>
