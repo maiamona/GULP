@@ -1,1 +1,86 @@
-<!doctype html><html><head><meta charset="UTF-8"><title>Checkout Mirror Fashion</title><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><link rel="stylesheet" href="css/style.css"></head><body><div class="jumbotron"><div class="container"><h1>Ótima escolha!</h1><p>Obrigado por comprar na Mirror Fashion! Preencha seus dados para efetivar a compra.</p></div></div><div class="container"><div class="row"><div class="col-sm-4"><div class="panel panel-success"><div class="panel-heading"><h2>Sua compra</h2></div><div class="panel-body"><img src="img/produtos/foto1-azul.png" class="img-thumbnail img-responsive"><dl><dt>Produto</dt><dd><?= Fuzzy Cardigan ?></dd><dt>Cor</dt><dd>Azul</dd><dt>Tamanho</dt><dd>42</dd></dl></div></div></div><form class="col-sm-8"><div class="row"><fieldset class="col-md-6"><legend>Dados pessoais</legend><div class="form-group"><label for="nome">Nome completo</label> <input type="text" class="form-control" id="nome" name="nome" autofocus required></div><div class="form-group"><label for="email">Email</label><div class="input-group"><span class="input-group-addon">@</span> <input type="email" class="form-control" id="email" name="email"></div></div><div class="form-group"><label for="cpf">CPF</label> <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required></div><div class="checkbox"><label><input type="checkbox" value="sim" name="spam" checked="checked"> Quero receber spam da Mirror Fashion</label></div></fieldset><fieldset class="col-md-6"><legend>Cartão de crédito</legend><div class="form-group"><label for="numero-cartao">Número - CVV</label> <input type="text" class="form-control" id="numero-cartao" name="numero-cartao"></div><div class="form-group"><label for="validade-cartao">Validade</label> <input type="month" class="form-control" id="validade-cartao" name="validade-cartao"></div></fieldset></div><button type="submit" class="btn btn-primary btn-lg pull-right">Confirmar Pedido</button></form></div></div></body><script src="js/all.js"></script></html>
+<!doctype html><html>
+    <head><meta charset="UTF-8">
+        <title>Checkout Mirror Fashion</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Ótima escolha!</h1>
+                <p>Obrigado por comprar na Mirror Fashion! Preencha seus dados para efetivar a compra.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h2>Sua compra</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img src="img/produtos/foto1-azul.png" class="img-thumbnail img-responsive">
+                            <dl>
+                                <dt>Produto</dt>
+                                <dd><?= Fuzzy Cardigan ?></dd>
+                                <dt>Cor</dt>
+                                <dd>Azul</dd>
+                                <dt>Tamanho</dt>
+                                <dd>42</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <form class="col-sm-8">
+                    <div class="row">
+                        <fieldset class="col-md-6">
+                            <legend>Dados pessoais</legend>
+                            <div class="form-group">
+                                <label for="nome">Nome completo</label> 
+                                <input type="text" class="form-control" id="nome" name="nome" autofocus required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">@</span>
+                                     <input type="email" class="form-control" id="email" name="email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpf">CPF</label>
+                                     <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="sim" name="spam" checked="checked"> Quero receber spam da Mirror Fashion
+                                        </label>
+                                    </div>
+                                    <a href="index.html" target="_blank">
+                                        <button type="submit" class="btn btn-primary btn-lg pull-right">Pagina Principal</button>
+                                    </a>
+                                    
+                                </fieldset>
+                                <fieldset class="col-md-6">
+                                    <legend>Cartão de crédito</legend>
+                                    <div class="form-group">
+                                        <label for="numero-cartao">Número - CVV</label>
+                                         <input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="validade-cartao">Validade</label> 
+                                            <input type="month" class="form-control" id="validade-cartao" name="validade-cartao">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg pull-right">Confirmar Pedido</button>
+                            </form>
+                        </div>
+                    </div>
+                </body>
+                <script src="js/all.js"></script>
+                </html>
