@@ -291,3 +291,61 @@ body {
 .painel h2 {
   font-family: 'Bad Script', sans-serif;
 }
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+#header {
+  width: 10px;
+  height: 20px;
+  background-color: red;
+}
+#menu a {
+  color: red;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+.component {
+  width: 10px;
+  height: 20px;
+  background-color: red;
+}
+@media (min-width: 768px) {
+  .component {
+    width: 600px;
+  }
+}
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .component {
+    background-image: url(../img/senhor.jpg);
+    background-color: transparent;
+    width: 12%;
+    padding: 116px;
+  }
+}
+@media (min-width: 1280px) {
+  .component {
+    width: 800px;
+  }
+}
+@media (min-width: 768px) {
+  .element {
+    font-size: 1.2rem;
+  }
+}
+.class {
+  width: 50%;
+  color: #f6430f;
+  background-color: #f8b38d;
+  height: 14.20472441px;
+}
+#header2 a {
+  color: orange;
+  display: block;
+  border: 1px solid black;
+  background-color: grey;
+  height: 14.20472441px;
+}
+#header2 a:hover {
+  background-color: white;
+}
