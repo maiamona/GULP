@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mirror Fashion</title><link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><link rel="stylesheet" href="css/style.css"><style>*{
+      box-sizing: border-box;
+  }
+
+  html, body{
+      margin: 0;
+      padding: 0;
+  }
+
+  .image-container{
+  margin: 0 auto;/*center the image container*/
+  width: 80%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.30), 0 11px 8px rgba(0, 0, 0, 0.22);
+  margin-bottom: 20px;
+  transition-duration: 1s;
+}
+
+.image-container:hover{
+  width: 90%;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.30), 0 14px 11px rgba(0, 0, 0, 0.22);
+}
+
+.lighbox{
+    display: table;/*help us center the lighbox-content*/
+position: fixed;
+top: -100%;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.7);/*black with 0.7 ophacity*/
+transition-duration: 2s;
+}
+
+.lighbox:target{
+    top: 0;/*cover the entire screen*/
+}
+
+.lighbox-content{
+    display: table-cell;
+    vertical-align: middle;/*vertical center*/
+    text-align: center;/*horizontall center*/
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+}
+
+img{/*make the image responsive*/
+max-width: 100%;
+height: auto;
+}</style></head><body><h1 style="text-align: center;">MONA</h1><div class="gallery"><div class="image-container" id="container1"><a href="#image1"><img src="./img/produtos/familia.jpg" alt="familia"></a><p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, expedita!</p></div><div class="image-container" id="container2"><a href="#image2"><img src="./img/produtos/mulher1.jpg" alt="familia"></a><p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, expedita!</p></div><div class="image-container" id="container3"><a href="#image3"><img src="./img/produtos/mulher2.jpg" alt="familia"></a><p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, expedita!</p></div></div><div class="lighbox" id="image1"><a href="#" class="close">CLOSE</a><div class="lighbox-content"><img src="./img/produtos/foto1-azul.png" alt="familia"></div></div><div class="lighbox" id="image2"><a href="#" class="close">CLOSE</a><div class="lighbox-content"><img src="./img/produtos/foto1-rosa.png" alt="familia"></div></div><div class="lighbox" id="image3"><a href="#" class="close">CLOSE</a><div class="lighbox-content"><img src="./img/produtos/foto1-verde.png" alt="familia"></div></div><br><a style="float: right;" href="index.html">VOLTAR</a></body><!-- <script src="js/jquery.js"></script>
+  <script src="js/home.js"></script>   
+  <script src="js/produto.js"></script> --><script src="js/all.js"></script></html>

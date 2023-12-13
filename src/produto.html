@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Mirror Fashion</title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/produto.css">
+    
+  </head>
+  <body>
+<style>
+	.card{
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3), 0 7px 21px 0 rgba(0,0,0,0.20);
+  box-sizing: border-box;
+  width: 250px;
+  font-family: sans-serif;
+}
+
+.card-text{
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.card > img{
+  max-width: 100%;
+  height: auto;
+}
+.menu-opcoes .pai,
+.detalhes .pai{
+  flex: 1;
+}
+
+.pagination-container{
+	text-align: center;
+}
+
+.pagination{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #0076ff;
+}
+
+.pagination a{
+	color: black;
+	text-decoration: none;
+	padding: 7px 14px;
+	float: left;
+	border-right: 1px solid #0076ff;
+	transition-duration: 1s;
+}
+
+.pagination a:hover{
+	background: #0076ff;
+	color: white;
+}
+
+.pagination li:last-child > a{/*select the last child*/
+border: none;/*removes borders of the last link*/
+}
+	</style>
+    <header class="container">
+      <h1><img src="./img/logo.png" alt="Mirror Fashion"></h1>
+	  <a style="float: right;margin-top: -79px;"  href="index.html">VOLTAR</a>
+      <p class="sacola">
+        Nenhum item na sacola de compras
+      </p>
+
+      <!-- <nav class="menu-opcoes" style="display: flex; justify-content: space-between;">
+		<div class="pai">
+        <ul>
+          <li><a href="#">Sua Conta</a></li>
+          <li><a href="#">Lista de Desejos</a></li>
+          <li><a href="#">Cartão Fidelidade</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="#">Ajuda</a></li>
+        </ul>
+	</div>
+	<div class="pai">
+		<div style="column-count: 3;column-width: 100px;"></div>
+    </div>  
+	</nav> -->
+    </header><!-- fim do cabecalho -->
+
+		<div class="produto-back">
+			<div class="container">
+				<div class="produto">
+					<h1>Fuzzy Cardigan</h1>
+					<h2>por apenas R$ 120,00</h2>
+
+					<form action="checkout.html">
+						
+						<fieldset class="cores" style="display: flex;
+						justify-content: space-evenly;">
+							<legend>Escolha a cor:</legend>
+
+							<input type="radio" name="cor" value="verde" id="verde" checked>
+							<label for="verde">
+								<img src="img/produtos/foto1-verde.png" alt="Cardigan Verde com detalhes em azul">
+							</label>
+							
+							<input type="radio" name="cor" value="rosa" id="rosa">
+							<label for="rosa">
+								<img src="img/produtos/foto1-rosa.png" alt="Cardigan Rosa com detalhes em laranja">
+							</label>
+							<input type="radio" name="cor" value="rosa" id="rosa">
+							<label for="rosa">
+								<img src="img/produtos/foto1-rosa.png" alt="Cardigan Rosa com detalhes em laranja">
+							</label>
+							
+							<input type="radio" name="cor" value="azul" id="azul">
+							<label for="azul">
+								<img src="img/produtos/foto1-azul.png" alt="Cardigan Roxo com detalhes em Roxo escuro">
+							</label>
+								
+						</fieldset>
+<!-- <div class="pagination-container">
+	<ul class="pagination" style="display: flex;width: 23.15%;">
+		<li><a href="#"><i class="far fa-angle-left"></i></a></li>
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		<li><a href="#"><i class="fal fa-angle-right"></i></a></li>
+	</ul>
+</div> -->
+						<fieldset class="tamanhos">
+							<legend>Escolha o tamanho:</legend>
+
+							<input type="range" min="36" max="46" value="42" step="2" name="tamanho" id="tamanho">
+							<output for="tamanho" name="valortamanho">42</output>
+						</fieldset>
+
+						<input type="submit" class="comprar" value="Comprar">
+					</form>
+				</div>
+
+				<div class="detalhes" style="display: flex;justify-content: space-around;">
+					<div class="pai" style="width: 40%;">
+					<h2>Detalhes do produto</h2>
+
+					<p><?= $produto["descricao"] ?></p>
+
+					<table class="table table-bordered table-striped" style="width: 90%;">
+						<thead>
+							<tr>
+								<th>Característica</th>
+								<th>Detalhe</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Modelo</td>
+								<td>Cardigã 7845</td>
+							</tr>
+							<tr>
+								<td>Material</td>
+								<td>Algodão e poliester</td>
+							</tr>
+							<tr>
+								<td>Cores</td>
+								<td>Azul, Rosa e Verde</td>
+							</tr>
+							<tr>
+								<td>Lavagem</td>
+								<td>Lavar a mão</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+					<div class="card pai" style="width: 40%;">
+						<img src="./img/produtos/familia.jpg" alt="familia">
+						<div class="card-text">
+							Beautiful City
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<br>
+		<footer>
+		    <div class="container">
+		      <img style="background-color: grey;" src="img/logo-rodape.png" alt="Logo Mirror Fashion">
+
+		      <ul class="social">
+		        <li><a href="http://facebook.com/mirrorfashion">Facebook</a></li>
+		        <li><a href="http://twitter.com/mirrorfashion">Twitter</a></li>
+		        <li><a href="http://plus.google.com/mirrorfashion">Google+</a></li>
+		      </ul>
+		    </div>
+		 </footer>
+		
+		<!-- <script src="js/jquery.js"></script>
+		<script src="js/produto.js"></script>
+		<script src="js/home.js"></script> -->
+		<script src="js/all.js"></script>
+		
+	</body>
+</html>
+	

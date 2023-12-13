@@ -1,0 +1,7 @@
+gulp
+
+gulp imagemin
+
+gulp build-js
+
+lessc src/less/estilos.less src/scss/_estilos.scss

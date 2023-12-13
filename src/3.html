@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <style>
+      *{
+    box-sizing: border-box;
+}
+
+.input-cnt{
+    display: flex;
+}
+
+.input-cnt > i{
+    min-width: 40px;
+    padding: 10px;
+    text-align: center;
+    background: lightgrey;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.input-cnt > input{
+    outline: none;
+    border: none;
+    padding: 10px;
+    border: 1px solid #0076ff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 60%;
+    transition: width .5s;
+}
+
+.input-cnt:hover >input{
+    border: 2px solid #0076ff;  
+    width: 100%;
+}
+
+.input-cnt:hover >i{
+    background: #0076ff;
+    color: white;
+}
+
+textarea{
+    background-color: #f3f3f3;
+    color: #d9534f;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+ul#demo4{
+    max-height: 100px;
+    overflow-y: hidden;
+    transition: all 1s;
+}
+      </style>
+</head>
+<body>
+    <p>Note!<b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, explicabo.</b></p>
+    <div class="input-cnt">
+        <i class="material-icons">search</i>
+        <input type="text" placeholder="Search here...">
+    </div>
+    <br>
+    <input type="file" onchange="readFile();" id="demo">
+    <img src="./img/3.jpg" alt="image" id="result">
+    <br><br><br><br><br>
+    Mes e Ano <br>
+    <input type="month" id="demo2">
+    <br>
+    <button onclick="getValue()">Get Value</button>
+    <br><br><br><br><br>
+    <p id="demo3"></p>
+    <button onclick="getRandomInit(1,10)">Gerar numero de 1 a 10</button>
+    <br><br><br><br><br>
+    <textarea name="" id="sample" cols="30" rows="10" placeholder="my message here..."></textarea>
+    <br>
+    <button onclick="getValue2();">Get Value</button>
+    <br><br><br><br><br>
+    <select name="" id="sample2" multiple>
+        <option value="Apples">Apples</option>
+        <option value="Oranges">Oranges</option>
+        <option value="Grapes">Grapes</option>
+        <option value="Bananas">Bananas</option>
+        <option value="Strawberries">Strawberries</option>
+    </select>
+    <br>
+    <button onclick="getValue3();">Get Value</button>
+    <br><br><br><br><br>
+    <ul id="demo4">
+        <li>Mercury</li>
+        <li>Venus</li>
+        <li>Earth</li>
+        <li>Mars</li>
+    </ul>
+    <div>
+        <button onclick="slideUp()">Slide Up</button>
+        <button onclick="slideDown()">Slide Down</button>
+    </div>
+    <br><br><br><br><br>
+    <p>N<sub>2</sub> + H<sub>2</sub> &rarr; NH<sub>3</sub></p>
+    <p>N<sub>2</sub> + H<sub>2</sub> &rarr; 2NH<sub>3</sub></p>
+    <button onclick="mona()">Botao Mona</button>
+    <br><br><br><br><br>
+    <p> = (x + 2) (x<sup>2</sup> + 3)</p>
+    <p>x<sup>3</sup> + 3x + 2x<sup>2</sup> + 6</p>
+    <p>x<sup>3</sup> + 2x<sup>2</sup> + 3x + 6</p>
+    <br>
+    <div>
+        <a style="padding-bottom: 33px;" href="index.html">VOLTAR</a>
+     </div>
+</body>
+<script src="js/all.js"></script>
+</html>
